@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>marquee标签无缝滚动</title>
+		<style type="text/css">
+			#content{
+				margin-top:100px;
+				height: 150px;width: 400px;
+				border: 1px solid salmon;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div id="box">
+			<ul id="con1">
+				<li>第一列</li>
+				<li>第2列</li>
+				<li>第3列</li>
+				<li>第4列</li>
+				<li>第5列</li>
+				<li>第6列</li>
+				<li>第7列</li>
+				<li>第8列</li>
+				<li>第9列</li>
+				<li>第10列</li>
+			</ul>
+			<ul id="con2">
+			</ul>				
+		</div>
+		</div>
+		
+		
+		
+	
+	<script type="text/javascript">
+	
+	window.onload=function(){
+		var area=document.getElementById("box");
+//		alert(area.scrollTop);
+		area.scrollTop=30;
+	}
+	
+	
+	
+	
+	
+//		var area = document.getElementById("box");
+//		area.scrollTop=0;
+//		setInterval(function(){
+//			area.scrollTop++;
+//		},50);
+	</script>
+		
+
+		
+	</body>
+</html>

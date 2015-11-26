@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>marquee标签知识点</title>
+	</head>
+
+	<body>
+		<marquee>我默认向左滚</marquee>
+
+		<marquee direction="right">我向右滚动</marquee>
+
+		<marquee scrollamount="2" behavior="alternate" loop="3">文字滚动示例（默认方向，滚动方式为alternate，循环三次，滚动两次</marquee>
+		<!---->
+		<!--这里的宽和高值得是滚动区域的宽和高-->
+		<marquee direction="top" bgcolor="#ccff66" width="250px" height="55px">我在区域内滚动，向上滚</marquee>
+	
+		<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="1">鼠标移入移出效果</marquee>
+			
+		
+
+
+
+	</body>
+
+</html>
