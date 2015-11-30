@@ -1,5 +1,5 @@
 # scratchPaper
-草稿本啦，it's a scratch paper !
+草稿本啦，it's a scratch paper !收录了平时生活中积累的小例子和知识点。
 
 **此文件夹里收录的大都是平时工作学习中积累的一些小例子，菜鸟一枚，轻喷~**
 
