@@ -1,12 +1,10 @@
-知识点
+﻿知识点
 
 1、innerHTML
 
 
 
 2、scrollTop
-
-
 
 
 3.offsetHeight

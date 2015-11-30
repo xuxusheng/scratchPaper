@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-同意接受才能下一步</title>
+    <script src="../../jquery.min.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form>
+        <input type="checkbox" id="input-agree" /><label for="input-agree">我同意上述的协议内容</label>
+        <button type="button" id="btn-agree" disabled="disabled">下一步</button>
+    </form>
+        <script>
+            $(function(){
+                var $input_agree=$("#input-agree");
+                $input_agree.on("click",function(){
+                    if($input_agree.is(":checked")){          //注意！！！此时获取到的是点击之前的状态！！！
+                        $("#btn-agree").removeAttr("disabled");    //如果点击之前状态是同意，则点击后不同意，禁用按钮
+                    }else{
+                        $("#btn-agree").attr("disabled","disabled");  //如果点击之前状态是不同意，则点击后同意，启用按钮
+                    }
+                });
+            })
+        </script>
+</body>
+</html>

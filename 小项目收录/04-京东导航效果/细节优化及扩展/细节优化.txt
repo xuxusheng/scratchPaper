@@ -1,0 +1,35 @@
+当鼠标在不同的一级li时
+二级菜单所处的高度不一样
+
+可以利用鼠标所处的一级菜单的索引
+判断二级菜单距顶部的高度
+索引值越大，则高度越大
+
+
+
+
+
+//h0为二级菜单距顶部的高度，i为索引值，i-1表示当前li上面的li数量
+每个li高度为30像素，42像素表示的是“全部商品分类”的高度。
+
+var h0=(i-1)*30+42;
+
+
+//得到悬浮层底部距离最上方的距离
+
+var y=this.getElementsByTagName("div")[0].offsetHeight;
+
+var h=this.getElementsByTagName("div")[0].style.top+y;
+
+
+
+
+if(h<h0){
+	this.getElementsByTagName("div")[0].style.top = h0+"px";
+}
+
+
+
+这里i在for循环内部，取值涉及到了闭包问题，没看太明白！！
+原视频地址：
+http://www.imooc.com/video/3233

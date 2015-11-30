@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+<img id="img1" src="images/世界地图.jpg" style="width:500px;"/>
+
+
+
+<script>
+    var timer;
+    alert("设置了定时器，每隔0.1毫秒alert一次，相当于每隔0.1毫秒页面停止加载一次，如果弹出nonono说明页面还未加载完成，观察弹出windo.onload和ready还有图片complete的先后顺序,以及此时页面上图片显示的程度");
+    window.onload=function(){
+        alert("winow.onload");
+        if(document.getElementById("img1").complete){
+            alert("图片complete");
+            clearInterval(timer);
+        }else{
+            alert("nonono");
+        }
+    };
+    $(function(){
+        alert("ready");
+        if(document.getElementById("img1").complete){
+            alert("图片complete");
+            clearInterval(timer);
+        }else{
+            alert("nonono");
+        }
+
+        timer=setInterval(function(){
+            if(document.getElementById("img1").complete){
+                alert("图片complete");
+                clearInterval(timer);
+            }else{
+                alert("nonono");
+            }
+        },0.1);
+    });
+
+
+</script>
+</body>
+</html>

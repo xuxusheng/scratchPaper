@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <textarea id="textarea-1" oninput="change()">默认文字</textarea><label id="label-textarea-1" for="textarea-1">您还可以输入10个字</label>
+        <input type="button" id="showLength" value="显示已输入字数"/>
+    </form>
+    <script>
+        var label_textarea_1;
+        var textarea_1;
+
+        window.onload=function(){
+            label_textarea_1=document.getElementById("label-textarea-1");
+            textarea_1=document.getElementById("textarea-1");
+            document.getElementById("showLength").addEventListener("click",showLength);
+
+
+            change();
+        };
+
+        function showLength(){
+            var length=textarea_1.value.length;
+            alert(length);
+        }
+
+        function change(){
+            var length=textarea_1.value.length;           //定义numberLength等于已输入文字的长度
+            var numberNo=10-length;
+            if(numberNo > 0){
+                label_textarea_1.innerHTML="您还可以输入"+numberNo+"个字"
+            }else if(numberNo == 0){
+                label_textarea_1.innerHTML="已达到输入字数上限";
+            }else{
+                label_textarea_1.innerHTML="你已超过输入上限"+Math.abs(numberNo)+"个字";
+            }
+        }
+
+
+//        function change(){
+//            var label_textarea1=document.getElementById("label-textarea1");
+//            label_textarea1.innerHTML="您还可以输入"+i+"个字";
+//        }
+
+
+
+
+    </script>
+</body>
+</html>

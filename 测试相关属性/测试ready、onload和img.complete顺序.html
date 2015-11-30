@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        div{
+            border:red 1px solid;
+            width:100%;min-height:20px;
+            word-break: break-all;
+            word-wrap:break-word;
+        }
+        #div2{
+            border:darkgreen 1px solid;
+        }
+        #div3{
+            border:1px solid sienna;
+        }
+        img{
+            width:500px;height:500px;
+        }
+        .hidden{
+            /*display:none;*/
+        }
+    </style>
+</head>
+<body>
+<button type="button" id="btnStop" >停止</button>
+<button type="button" id="btnContinue" >继续</button>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+<img id="img1" src="images/世界地图.jpg"/>
+<img class="hidden" src="images/世界地图.jpg"/>
+
+
+<script>
+    var timer1,timer2,timer3;
+
+    $(window).load(function(){
+        var k=0;var $div3=$("#div3");
+        timer3=setInterval(timer3F,100);
+        function timer3F(){
+            $div3.append(k+";");
+            k++;
+        }
+    });
+
+
+    $(function() {
+        var i= 0 , j=0;
+        var $div1=$("#div1");
+        var $div2=$("#div2");
+        timer1=setInterval(function(){
+            $div2.append(j+";");
+            j++;
+        },100);
+        timer2=setInterval(function(){
+            if(document.getElementById("img1").complete){
+                $div1.append(i+";");
+                i+=1;
+            }
+        },100);
+    });
+
+    $("#btnStop").on("click",function(){
+        clearInterval(timer1);
+        clearInterval(timer2);
+        clearInterval(timer3);
+    });
+    $("#btnContinue").on("click",function(){
+        timer1();
+        timer2();
+        timer3();
+    })
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
+</body>
+</html>

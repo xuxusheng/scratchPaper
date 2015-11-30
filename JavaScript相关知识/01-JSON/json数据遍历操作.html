@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div id="div1">asdfasdf</div>
+<script>
+    var jsonObj = {
+        "pagination": {
+            "currentPage": 2,
+            "dataList": [
+                {
+                    "appId": "2",
+                    "cusId": "0",
+                    "id": 310030,
+                    "ipAddress": "192.168.1.147",
+                    "logMess": "RunApp",
+                    "logTime": "2013-12-06T11:04:24",
+                    "logType": "1"
+                },
+                {
+                    "appId": "2",
+                    "cusId": "0",
+                    "id": 310038,
+                    "ipAddress": "192.168.1.147",
+                    "logMess": "RunApp",
+                    "logTime": "2013-12-06T11:04:26",
+                    "logType": "1"
+                },
+                {
+                    "appId": "1",
+                    "cusId": "0",
+                    "id": 310039,
+                    "ipAddress": "192.168.1.147",
+                    "logMess": "RunApp",
+                    "logTime": "2013-12-06T11:04:26",
+                    "logType": "1"
+                }
+            ],
+            "maxResult": 20,
+            "pageSize": 10,
+            "pages": 51,
+            "skipResult": 10,
+            "total": 504
+        }
+    };
+    var dataList = jsonObj["pagination"].dataList;  //将dataList对象数组提取出来
+    //        alert(dataList);
+    var str="{";           // 初始化字符串str用来存储遍历出来的对象属性
+    for( var key in dataList[0]){                  // 遍历当前对象
+        str　+= "\""+key+"\":\""+dataList[0][key]+"\",";         // 拼字符串
+    }
+    str = str.substring(0,str.length-1);         // 去掉最后一个逗号
+    str += "\}";                                 // 末尾加上反括号
+    alert(str);
+
+
+
+
+
+
+    //        for(var i=0,j=dataList.length;i<j;i++){
+    //            var oneData = dataList[i];
+
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+    <style>
+        div{
+            width:100px;height:100px;border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="div1">
+            <p id="p1">我是一个文本节点</p>
+        </div>
+    </div>
+
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+    </ul>
+
+    <script>
+//        var div1=document.getElementById("div1");
+//        console.log("nodeType:"+div1.nodeType);                 //元素节点
+//        console.log("nodeName:"+div1.nodeName);                 //nodeName的值是元素的标签名
+//        console.log("nodeValue:"+div1.nodeValue);               //nodeValue的值始终是null
+//
+//        console.log(div1.childNodes[0].nodeType);              //3
+//        console.log(div1.childNodes[0].nodeName);               //#text
+//        console.log(div1.childNodes[0].nodeValue);
+
+        var content=document.getElementById("content");
+        var createDiv=document.createElement("div");
+        var div1=document.getElementById("div1");
+        content.appendChild(createDiv);
+        content.appendChild(div1);
+
+        var ul1=document.getElementsByTagName("ul")[0];
+        alert(ul1.childNodes.length);
+
+
+    </script>
+</body>
+</html>

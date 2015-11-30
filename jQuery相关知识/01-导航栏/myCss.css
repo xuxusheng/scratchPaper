@@ -1,0 +1,99 @@
+*{
+    margin:0;padding:0;font-size:12px;line-height:22px;
+    text-decoration: none;
+}
+ul{
+    list-style:noen;
+}
+
+.box{
+    width:150px;
+    margin:50px auto;
+    text-align:center;
+}
+.menu{
+    border:solid #C4D5DF;
+    border-width:0 1px 1px;
+    overflow:hidden;
+}
+
+/* level-1 */
+.menu .level1{
+    position:relative;
+}
+.menu .level1 > a{
+    text-decoration:none;
+    display:block;
+    height:28px;line-height:28px;
+    background-color:#EBF3F8;
+    color:#5893b7;
+    border-top:1px solid #C4D5DF;
+    font-weight:700;
+}
+.menu .level1 .current{
+    background-color:#B1D7EF;
+}
+.btn-level2-create{
+    width:28px;height:28px;
+    position:absolute;
+    border:1px solid #446bb7;
+    right:11px;
+}
+.btn-level2-create:hover{
+    cursor:pointer;
+}
+.btn-level2-create p{
+    font-size:2em;
+    font-weight: 700;
+    line-height:28px;
+    text-align:center;
+}
+
+/* level-2 */
+.menu li ul{
+    overflow:hidden;
+    display:none;
+}
+.menu li .level2 li a{
+    display:block;
+    height:28px;line-height:28px;
+    background-color:#fff;
+    font-weight:400;
+    color:#42556B;
+    overflow:hidden;
+}
+    /* .level2-temp 暂时用来表示新增的二级菜单*/
+.level2-temp{
+    display:block;
+    height:28px;line-height:28px;
+    background-color:#fff;
+    font-weight:400;
+    color:#42556B;
+    overflow:hidden;
+}
+.menu li .level2 li a:hover{
+    color:#f60;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

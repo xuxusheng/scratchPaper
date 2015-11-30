@@ -1,0 +1,19 @@
+body{
+    font-size:13px;
+}
+.divFrame{
+    width:260px;border:1px solid #666;
+}
+.divFrame .divTitle{
+    padding:5px;
+    background:#eee;
+}
+.divFrame .divContent .clsShow{
+    font-size:14px;
+}
+.btn{
+    border:#666 1px solid;
+    padding:2px;
+    width:80px;
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffffff,EndColorStr=#ECE9D8);
+}
